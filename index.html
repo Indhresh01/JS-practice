@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <style>
+        .display_user {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .user {
+            margin: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: lightblue;
+            width: 200px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <button id = "fetch_btn"> fetch</button>
+    <div id ="display_user" class="display_user"></div>
+    
+    <script>
+        document.getElementById('fetch_btn').addEventListener('click', fetched);
+
+        function fetched(){
+            fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const display_user = document.getElementById('display_user');
+                display_user.innerHTML = '';
+
+                data.forEach(user => {
+                    const userdiv = document.createElement('div');
+                    userdiv.className = 'user';
+                    userdiv.innerHTML = `<p>Name: ${user.name}</p>
+                                     <p>Roll_no: ${user.rollno}</p>
+                                     <p>Email: ${user.cgpa}</p>`;
+
+                    display_user.appendChild(userdiv);
+                    
+                });
+
+            })
+            .catch(error => console.error('Error fetching data:', error));
+
+        }
+    </script>
+</body>
+</html>

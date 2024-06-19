@@ -1,0 +1,105 @@
+/*const arr = [
+            name = "Indhresh",
+            Id = 217,
+            Single = true,
+            favoriteGames = [
+                'cricket','Badminton','football'
+            ]
+        ];
+
+        arr.forEach((a) =>{
+            guess(a);
+        });
+
+        function guess(data){
+            console.log(typeof data);
+        }
+
+        reverse('word');
+
+        function reverse(word){
+            let newWord = "";
+
+            for(let i=word.length; i>=0; i--){
+                newWord += word.charAt(i);
+            }
+
+            console.log(newWord);
+        }
+        
+
+        function checkVowels(word){
+            let cnt = 0;
+
+            word = word.toLowerCase();
+
+            const vowes = ['a', 'e','i','o','u'];
+
+            for(let i = 0; i<word.length; i++){
+                if(vowes.includes(word.charAt(i))){
+                    cnt++;
+                }
+            }
+
+            console.log(cnt);
+        }
+
+        checkVowels('aeiou');
+
+        
+       function checkOddOrEven(number){
+        if(number % 2 === 0) console.log(true);
+
+        else console.log(false);
+       }
+
+       checkOddOrEven(22);
+
+       const arr = [1,2,3,4,5,6,7,8,9,10];
+
+       let sum = 0;
+
+       arr.forEach((num) => {
+            sum += num;
+       });
+
+       console.log(sum);
+
+       const arr = [1,2,3,4,5,6];
+       square(arr);
+
+       function square(arr){
+        let newArray = [];
+
+        arr.forEach((element)=> {
+            newArray.push(element * element);
+        });
+
+        console.log(newArray);
+
+       }
+
+       
+       const arr = [1,2,3,4,5,6];
+
+       findEven(arr);
+
+       function findEven(arr){
+        arr.forEach(element => {
+            if(element % 2 === 0){
+                console.log(element);
+            }
+        });
+       }
+
+       const obj = {
+        name : 'Indhresh',
+        age : 21,
+        employment : 'unemployed'
+       };
+
+       format(obj);
+
+       function format(obj){
+        console.log(JSON.stringify(obj));
+       }*/ 
